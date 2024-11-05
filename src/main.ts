@@ -1,11 +1,11 @@
 // src/main.ts
 import express, { Request, Response } from "npm:express";
 import mongoose from "npm:mongoose";
-import bodyParser from "npm:body-parser"; // For parsing request bodies
+import bodyParser from "npm:body-parser";
 import login from "./login.ts";
 import register from "./register.ts";
-import { authenticateToken, isAdmin } from "./middleware/auth.ts"; // Import authentication middleware
-import User from "./models/User.ts"; // Import User model to fetch user data
+import { authenticateToken, isAdmin } from "./middleware/auth.ts";
+import User from "./models/User.ts";
 
 const app = express();
 app.use(bodyParser.json());

@@ -25,7 +25,6 @@ def login(username, password):
     }
     response = requests.post(url, json=payload)
     return response
-
 # Get the user profile using the JWT
 def get_profile(token):
     url = f'{BASE_URL}/admin/users'
