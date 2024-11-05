@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // Connect to MongoDB
 mongoose.connect("mongodb://localhost:27017/vr-padel")
   .then(() => console.log("MongoDB connected"))
-  .catch(err => console.error("MongoDB connection error:", err));
+  .catch((err : unknown) => console.error("MongoDB connection error:", err));
 
 // Routes
 app.post("/register", async (req: Request, res: Response) => {
